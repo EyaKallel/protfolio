@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Kallel Eya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Contactez-moi</h1>
+            <p>N'hésitez pas à me contacter pour toute question ou collaboration</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="parcours.html">Parcours</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="stages.html">Stages</a></li>
+            <li><a href="manifestations.html">Manifestations</a></li>
+            <li><a href="matieres.html">Matières</a></li>
+            <li><a href="passions.html">Passions</a></li>
+            <li><a href="quizz.html">Quiz</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="temoignage.html">Témoignage IIT</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h2>Formulaire de Contact</h2>
+
+            <form id="contactForm" action="mailto:eya.kallel@gmail.com" method="post" enctype="text/plain" onsubmit="return afficherAlerte()">
+                <label for="nom">Nom complet :</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+
+                <label for="email">Adresse email :</label>
+                <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+
+                <label for="sujet">Sujet :</label>
+                <input type="text" id="sujet" name="sujet" placeholder="Sujet de votre message" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="8" placeholder="Écrivez votre message ici..." required></textarea>
+
+                <button type="submit">Envoyer le message</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Informations de Contact</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Email</h3>
+                    <p>eya.kallel@gmail.com</p>
+                </div>
+                <div class="card">
+                    <h3>Téléphone</h3>
+                    <p>+216 21 437 586</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Eya Kallel</h3>
+                <p>Développeuse Full Stack</p>
+                <p>IIT Sfax, Tunisie</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="parcours.html">Parcours</a></li>
+                    <li><a href="competences.html">Compétences</a></li>
+                    <li><a href="stages.html">Stages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:eya.kallel@gmail.com">eya.kallel@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Sfax, Tunisie
+                    </li>
+                </ul>
+
+                <a href="contact.html" class="btn-contact">
+                    <i class="fas fa-paper-plane"></i> Me Contacter
+                </a>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/eya-kallel-ab4b60296/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/EyaKallel" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://facebook.com/eya.kallel" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Eya Kallel - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        function afficherAlerte() {
+            const nom = document.getElementById('nom').value;
+            const email = document.getElementById('email').value;
+            
+            alert("✅ Merci " + nom + " !\n\nVotre message a été envoyé avec succès.\n\nJe vous répondrai bientôt à l'adresse : " + email);
+            
+            return true;
+        }
+    </script>
+</body>
+</html>
